@@ -6,14 +6,11 @@ var app = angular.module('app', ['ngRoute', 'appControllers', 'appFilters', 'app
  */
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
-	when('/partial1', {
-		templateUrl: 'partials/partial1.html',
+	when('/home', {
+		templateUrl: 'partials/home.html',
 		controller: 'HomeController'
 	}).
-	when('/partial2', {
-		templateUrl: 'partials/partial2.html'
-	}).
 	otherwise({
-		redirectTo: '/partial2'
+		redirectTo: '/home'
 	});
 }]);
